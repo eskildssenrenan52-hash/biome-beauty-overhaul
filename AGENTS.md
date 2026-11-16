@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Game code lives in src/game (canvas engine) and src/components/game (React UI), mounted on / with ssr:false; extra per-biome decoration is in src/game/biomeDecor.ts, layered over the original backdrop/foreground so original art stays intact.
