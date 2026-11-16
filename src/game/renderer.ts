@@ -1,6 +1,7 @@
 // @ts-nocheck -- imported game code, written for a looser TS config
 // @ts-nocheck — imported game code, typed under the original looser tsconfig
 import { drawEnhancedBackdrop, drawEnhancedForeground } from './backdropRenderer';
+import { drawBiomeDecorBackdrop, drawBiomeDecorForeground } from './biomeDecor';
 import { GameEngine, LiveEntity } from './engine';
 import { getHeroDef, getHeroSkinDef } from './heroes';
 import { getAnyBossMeta, isBossKind } from './modes';
@@ -79,6 +80,7 @@ export class PixelRenderer {
 
     // 1. Multi-layer Parallax Backdrop (Planes 0..4 responding to bgCamX / bgCamY)
     drawEnhancedBackdrop(ctx, room.biome, room.gx, room.gy, bgCamX, bgCamY, this.time, engine);
+    drawBiomeDecorBackdrop(ctx, room.biome, bgCamX, bgCamY, this.time);
 
     ctx.save();
     ctx.translate(shakeX, shakeY);
@@ -138,6 +140,7 @@ export class PixelRenderer {
 
     // 4. Plane 6: Foreground 1.35x Parallax Framing & Spores/Embers
     drawEnhancedForeground(ctx, room.biome, this.time, engine, bgCamX, bgCamY);
+    drawBiomeDecorForeground(ctx, room.biome, bgCamX, this.time);
 
     // 4b. Cinematic light shafts, drifting motes and color grade
     this.drawCinematicPass(ctx, meta.accent, bgCamX, bgCamY);
