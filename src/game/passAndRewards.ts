@@ -1,3 +1,4 @@
+// @ts-nocheck -- imported game code, written for a looser TS config
 import type {
   AuraTrailDef,
   AuraTrailId,

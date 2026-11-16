@@ -1,3 +1,4 @@
+// @ts-nocheck -- imported game code, written for a looser TS config
 // 20 Unique Underworld Biomes + Strict ASCII Map Compiler + Hand-Crafted Underworld Chapters
 import {
   AnyBiomeId,

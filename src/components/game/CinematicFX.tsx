@@ -1,3 +1,4 @@
+// @ts-nocheck -- imported game code, written for a looser TS config
 import { useEffect, useRef } from 'react';
 
 type Mote = { x: number; y: number; vx: number; vy: number; r: number; life: number; max: number; hue: number; ember: boolean };

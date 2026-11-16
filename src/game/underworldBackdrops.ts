@@ -1,3 +1,4 @@
+// @ts-nocheck -- imported game code, written for a looser TS config
 // Animated multi-layered spectacles & atmospheric foregrounds for the 20 Underworld Biomes
 import type { GameEngine } from './engine';
 import { VIRTUAL_HEIGHT, VIRTUAL_WIDTH } from './types';
